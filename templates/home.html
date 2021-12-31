@@ -22,8 +22,8 @@
             <form>
                 <div class="form-group">
                     <label>select course</label>
-                    <select name="course"class="form-control">
-                        <option value="choose">Choose</option>
+                    <select name="course" class="form-control">
+                        <option> value="choose">Choose</option>
                         {%for course in courses%}
                         <option value="{{course.course_name}}">{{course.course_name}}</option>
                         {% endfor %}
