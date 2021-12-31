@@ -21,24 +21,20 @@
           
             <form>
                 {% csrf_token %}
-           
-
-                
-
-           
                 <div class="form-group">
-                <label>select course</label>
-                <select name="course"class="form-control">
-                    <option value="choose">Choose</option>
-                    {%for course in courses%}
-                    <option value="{{course.course_name}}">{{course.course_name}}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <button class="btn btn-danger mt-3">submit</button>
+                    <label>select course</label>
+                    <select name="course"class="form-control">
+                        <option value="choose">Choose</option>
+                        {%for course in courses%}
+                        <option value="{{course.course_name}}">{{course.course_name}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button class="btn btn-danger mt-3">submit</button>
+            </form>
         </div>
     </div>
-</form>
+
 
 
 </body>
