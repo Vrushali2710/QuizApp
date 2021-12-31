@@ -17,23 +17,19 @@
                 <div v-for="(question,index) in questions">
                
                
-                <pre>[[index+1]].[[question.question]]             [[question.marks]]marks
-                     </pre><img :src ="question.image"/><br>
-                </pre> 
-                <div class="form-check" v-for="answer in question.answers">
-                    <input @change="checkAnswer($event ,question.uid)":value="answer.answer"class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"  >
-                    <label class="form-check-label" for="exampleRadios1">
-                    [[answer.answer]] 
-                    </label>
+                    <pre>[[index+1]].[[question.question]]             [[question.marks]]marks
+                        <img :src ="question.image"/><br>
+                    </pre> 
+                    <div class="form-check" v-for="answer in question.answers">
+                        <input @change="checkAnswer($event ,question.uid)" :value="answer.answer" class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"  >
+                        <label class="form-check-label" for="exampleRadios1">
+                        [[answer.answer]] 
+                        </label>
+                    </div>
+                    <hr>
               </div>
-              <hr>
-             
-         </div>
-       
-         
-          
+            </div>
         </div>
-        
     </div>
             
     
