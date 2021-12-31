@@ -8,9 +8,11 @@ import random
 def home(request):
     courses = Course.objects.all()
     context = {"courses":courses}
+
        
    
     if request.GET.get('course'):
+
         return redirect(f"/quiz/?course={request.GET.get('course')}")
     return render(request,'home.html',context)
 def quiz(request):
